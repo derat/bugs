@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>iOS v-app-bar hiding issue</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.3.16/dist/vuetify.min.css" rel="stylesheet" />
+    <style>
+      #content {
+        height: 4000px;
+        background: repeating-linear-gradient(
+          45deg,
+          #fff,
+          #fff 20px,
+          #eee 20px,
+          #eee 40px
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <v-app>
+        <v-app-bar app color="primary" class="white--text" hide-on-scroll>
+          <v-toolbar-title>Unimaginative title</v-toolbar-title>
+        </v-app-bar>
+        <v-main>
+          <div id="content"></div>
+        </v-main>
+      </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.3.16/dist/vuetify.min.js"></script>
+    <script>new Vue({ el: '#app', vuetify: new Vuetify({}) })</script>
+  </body>
+</html>
